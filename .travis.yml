@@ -1,0 +1,17 @@
+language: node_js
+node_js: node
+services:
+- mongodb
+addons:
+  apt:
+    sources:
+    - mongodb-3.2-precise
+    packages:
+    - mongodb-org-server
+deploy:
+  provider: heroku
+  api_key:
+    secure: G64XyRRSAh9vuAo55Uz7jUk7/sg/Tr/GbG+hqpfkFHFuriLXD7aolezey9aAC+nlWtcGKQuQDG9jmHSrQsEtEuiSarHH8u+E7bY8vA15+/av4zYuQVO0Xw6g1rbeLC5rf6ofVn11JcuPJ8OEErWx7JMNA3dxTf1ezvfvgFRUWvDO/L/dIlw2upsbIMnG4ZXxDw4lKkksWkHd9B4Y1klDy1lZM6/QJg0oS2yrjQ5qr66yY/b4aU9LBiqJIIz2jeF8hIpjXZ5W9IY3GNX5o9uhDXt7uBCd6z2qyso8sAf6HfGjTkP6bcN/rV8iXChpM4Cj3+I3zX62/SFxR08Uc2y9m+caGOJtZMVpOglHjqAMweOFqj9YHa7urP8gmLnVsnVznT8Jqh7JyvZ3qNSKAvXxTizMnEqHazmtcTjKeZetXmrxfQY4KhtM/VWwglyP6n//AFkhGcqZa18gDpdfejcjcYgX6jaSaA/n0CzLMr5D/YHa8+PXNrR3zcIW5sTI6p0edDbxVk7/DDne6nQksZSuNd1xo0OMhtwKwStoTm8WneRm4HG+NLwdQicHLpjFaeBp7InKzQmJJA55EOlXtn21ckogYgNxwofaQOnkLYxMFl/yeVimS0JKgIpvFgyDIaTFnfoZdZKTwiDqMVMccfyadlauf4tGB9sfqfplSQAPNKM=
+  app: blooming-cliffs-73776
+  on:
+    repo: dillon-mckee/supTravis
